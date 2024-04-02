@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.taskrecyclerview.databinding.FragmentCreateUserBinding
 
 class CreateUserFragment : Fragment() {
@@ -43,6 +44,9 @@ class CreateUserFragment : Fragment() {
                 binding.etCreateUserName.text.clear()
                 binding.etCreatePassword.text.clear()
             }
+        }
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_createUserFragment_to_launchFragment)
         }
     }
 

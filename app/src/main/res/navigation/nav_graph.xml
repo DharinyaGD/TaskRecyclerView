@@ -26,5 +26,9 @@
         android:id="@+id/createUserFragment"
         android:name="com.example.taskrecyclerview.CreateUserFragment"
         android:label="fragment_create_user"
-        tools:layout="@layout/fragment_create_user" />
+        tools:layout="@layout/fragment_create_user" >
+        <action
+            android:id="@+id/action_createUserFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
 </navigation>
