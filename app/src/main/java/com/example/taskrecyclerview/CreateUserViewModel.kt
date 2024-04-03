@@ -15,10 +15,12 @@ class CreateUserViewModel (
         viewModelScope.launch {
             val user = UsersDataClass(userName, password)
             if (isUserExists(user)) {
-                Toast.makeText(getApplication(), "Username and password already exist", Toast.LENGTH_SHORT).show()
+                Toast.makeText(getApplication(),
+                    "Username and password already exist", Toast.LENGTH_SHORT).show()
             } else {
                 repository.insertUser(user)
-                Toast.makeText(getApplication(), "Username and password saved successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(getApplication(),
+                    "Username and password saved successfully", Toast.LENGTH_SHORT).show()
             }
         }
     }
