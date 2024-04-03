@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.example.taskrecyclerview.LaunchFragment"
+        android:label="fragment_launch"
+        tools:layout="@layout/fragment_launch" >
+        <action
+            android:id="@+id/action_launchFragment_to_userRvFragment"
+            app:destination="@id/userRvFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userRvFragment"
+        android:name="com.example.taskrecyclerview.UserRvFragment"
+        android:label="fragment_user_rv"
+        tools:layout="@layout/fragment_user_rv" />
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.taskrecyclerview.CreateUserFragment"
+        android:label="fragment_create_user"
+        tools:layout="@layout/fragment_create_user" >
+        <action
+            android:id="@+id/action_createUserFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
+</navigation>
