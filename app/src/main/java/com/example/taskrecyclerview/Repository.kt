@@ -8,6 +8,7 @@ class Repository (private val userDao: DataAccessObject) {
         userDao.insertUser(user)
     }
 
+    // code to find is there is the user or not 
     suspend fun isUserExists(username: String): Boolean {
         return userDao.getUserByUsername(username) != null
     }
